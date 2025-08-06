@@ -6,5 +6,6 @@
     }
   },
   "locations_visited": {},
-  "current_node": ""
+  "current_node": "",
+  "current_location": ""
 }

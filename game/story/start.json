@@ -7,7 +7,7 @@
     "lines": [
       {
         "condition": {
-          "type": "and",
+          "type": "all",
           "checks": [
             { "target": "inventory", "check": false, "content": "hammer" },
             {
@@ -21,7 +21,7 @@
       },
       {
         "condition": {
-          "type": "or",
+          "type": "any",
           "checks": [
             { "target": "inventory", "check": true, "content": "hammer" },
             {
@@ -46,7 +46,7 @@
       }
     ],
 
-    "options": []
+    "options": { "exit": "exit" }
   },
   "2": {
     "lines": [
@@ -54,6 +54,14 @@
         "text": "You chose to do a different thing. This will lead you to another path in the story."
       }
     ],
-    "options": []
+    "options": { "exit": "exit" }
+  },
+  "exit": {
+    "lines": [
+      {
+        "text": "Thanks for playing."
+      }
+    ],
+    "options": { "back to start": "start" }
   }
 }
