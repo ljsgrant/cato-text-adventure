@@ -1,0 +1,82 @@
+{
+  "start": {
+    "ui_location": {
+      "x": 100,
+      "y": 100,
+      "paragraph": 0
+    },
+    "lines": [
+      {
+        "condition": {
+          "type": "all",
+          "checks": [
+            { "target": "inventory", "check": false, "content": "hammer" },
+            {
+              "target": "interactions",
+              "check": false,
+              "content": "david smith"
+            }
+          ]
+        },
+        "text": "This is the beginning of the story. You will encounter various challenges and characters. Make choices that will affect the outcome of your journey."
+      },
+      {
+        "condition": {
+          "type": "any",
+          "checks": [
+            { "target": "inventory", "check": true, "content": "hammer" },
+            {
+              "target": "interactions",
+              "check": true,
+              "content": "david smith"
+            }
+          ]
+        },
+        "text": "Some other thing"
+      }
+    ],
+    "options": {
+      "do a thing": "1",
+      "do a different thing": "2"
+    }
+  },
+  "1": {
+    "ui_location": {
+      "x": 100,
+      "y": 100,
+      "paragraph": 1
+    },
+    "lines": [
+      {
+        "text": "You chose to do a thing. This will lead you to a new path in the story."
+      }
+    ],
+    "options": { "exit": "exit" }
+  },
+  "2": {
+    "ui_location": {
+      "x": 100,
+      "y": 100,
+      "paragraph": 2
+    },
+    "lines": [
+      {
+        "text": "You chose to do a different thing. This will lead you to another path in the story."
+      }
+    ],
+    "options": { "exit": "exit" }
+  },
+  "exit": {
+    "ui_location": {
+      "x": 100,
+      "y": 100,
+      "paragraph": 3
+    },
+    "lines": [
+      {
+        "text": "Thanks for playing."
+      }
+    ],
+    "options": { "back to start": "start" }
+  }
+}
